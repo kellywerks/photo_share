@@ -19,6 +19,7 @@ group :test, :development do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'pry'
+  gem 'bcrypt'
 end
 
 group :test do
