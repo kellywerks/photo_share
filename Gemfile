@@ -7,12 +7,12 @@ gem 'uglifier'
 gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'turbolinks'
+gem 'bootstrap-sass'
 
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'quiet_assets'
-  gem 'bootstrap-sass'
 end
 
 group :test, :development do
@@ -20,6 +20,7 @@ group :test, :development do
   gem 'capybara'
   gem 'pry'
   gem 'bcrypt'
+  gem 'paperclip'
 end
 
 group :test do

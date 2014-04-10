@@ -6,8 +6,8 @@ feature "the signin process" do
     fill_in 'Name', :with => 'User Testini'
     fill_in 'Email', :with => 'user@example.com'
     fill_in 'Password', :with => 'password1'
-    fill_in 'Password_Confirmation', :with => 'password1'
-    click_link 'Create User'
+    fill_in 'Password confirmation', :with => 'password1'
+    click_button 'Create User'
     expect(page).to have_content 'Thanks'
   end
 end

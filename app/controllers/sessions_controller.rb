@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     user = User.find_by_email(params[:email])
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect_to root_url, notice: "Welcome to PhotoShare, #{user.name}!"
+      redirect_to photos_path, notice: "Welcome to PhotoShare, #{user.name}!"
     else
       flash.now.alert = "Email or password is invalid."
       render 'new'
@@ -19,7 +19,8 @@ class SessionsController < ApplicationController
   end
 
   # private
+
   # def session_params
-  #   params.require(:user).permit(:email, :password)
+  #   params.permit(:email, :password, :password_confirmation)
   # end
 end
